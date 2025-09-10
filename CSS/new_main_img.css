@@ -1,0 +1,158 @@
+/* Updated CSS to make images in main2 square */
+.main2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 20px;
+}
+
+.main2 a {
+    flex: 1 1 calc(25% - 15px); /* 4 items per row with gap */
+    min-width: 250px; /* Minimum width before wrapping */
+    display: block;
+}
+
+.main2 section {
+    height: 100%;
+    margin: 0; /* Remove individual margins since we're using gap */
+    position: relative;
+    transition: transform 0.5s;
+    overflow: hidden;
+    aspect-ratio: 1; /* Makes the container square */
+}
+
+.main2 img {
+    width: 100%;
+    height: 100%; /* Fill the entire square container */
+    object-fit: cover; /* Ensures images maintain aspect ratio while filling container */
+    display: block;
+}
+
+/* Hover effect for the entire section */
+.main2 section:hover {
+    transform: scale(1.02);
+}
+
+/* Media queries for responsive behavior */
+@media screen and (max-width: 1200px) {
+    .main2 a {
+        flex: 1 1 calc(50% - 15px); /* 2 items per row on medium screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main2 a {
+        flex: 1 1 100%; /* 1 item per row on small screens */
+    }
+    
+    .main2 {
+        gap: 10px;
+        padding: 10px;
+    }
+    
+    .main2 section {
+        max-width: 400px; /* Limit maximum size on mobile */
+        margin: 0 auto; /* Center the square on mobile */
+    }
+}
+
+/* Keep your existing color styles for borders and overlays */
+#imgArt img { border-top: 11px solid #ac8478; }
+#imgMirror img { border-top: 11px solid #d1bab0; }
+#imgTextile img { border-top: 11px solid #b8b7bd; }
+#imgVases img { border-top: 11px solid #777f8d; }
+#imgDecor img { border-top: 11px solid #4b606e; }
+
+/* Your existing text overlay styles remain the same */
+#imgArt .texts {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    right: 0;
+    background-color: #ac8478;
+    opacity: 0.7;
+    overflow: hidden;
+    width: 100%;
+    height: 0%;
+    transition: 2s ease;
+    text-align: center;
+}
+
+#imgMirror .texts {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    right: 0;
+    background-color: #d1bab0;
+    opacity: 0.7;
+    overflow: hidden;
+    width: 100%;
+    height: 0%;
+    transition: 2s ease;
+    text-align: center;
+}
+
+#imgTextile .texts {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    right: 0;
+    background-color: #b8b7bd;
+    opacity: 0.7;
+    overflow: hidden;
+    width: 100%;
+    height: 0%;
+    transition: 2s ease;
+    text-align: center;
+}
+
+#imgVases .texts {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    right: 0;
+    background-color: #777f8d;
+    opacity: 0.7;
+    overflow: hidden;
+    width: 100%;
+    height: 0%;
+    transition: 2s ease;
+    text-align: center;
+}
+
+#imgDecor .texts {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    right: 0;
+    background-color: #4b606e;
+    opacity: 0.7;
+    overflow: hidden;
+    width: 100%;
+    height: 0%;
+    transition: 2s ease;
+    text-align: center;
+}
+
+.theText {
+    width: 80%;
+    white-space: pre-wrap;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font: 60pt 'Segoe UI' 700;
+    text-align: center;
+}
+
+#imgArt:hover .texts,
+#imgDecor:hover .texts,
+#imgMirror:hover .texts,
+#imgTextile:hover .texts,
+#imgVases:hover .texts {
+    top: 0%;
+    height: 100%;
+}

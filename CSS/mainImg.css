@@ -1,0 +1,147 @@
+
+/* .main2 img {
+    height: 400px;
+} */
+
+/* .main2 section {
+    margin: 13px;
+} */
+
+#imgArt img {
+    border-top: 11px solid #ac8478;
+}
+
+#imgMirror img {
+    border-top: 11px solid #d1bab0;
+}
+
+#imgTextile img {
+    border-top: 11px solid #b8b7bd;
+}
+
+#imgVases img {
+    border-top: 11px solid #777f8d;
+}
+
+#imgDecor img {
+    border-top: 11px solid #4b606e;
+}
+
+
+#imgArt, #imgMirror, #imgTextile, #imgVases, #imgDecor {
+    position: relative;
+    transition: transform 0.5s;
+}
+
+
+
+    #imgArt .texts {
+        position: absolute;
+        top: 0%;
+        left: 0;
+        right: 0;
+        background-color: #ac8478;
+        opacity: 0.7;
+        overflow: hidden;
+        width: 100%;
+        height: 0%;
+        transition: 2s ease;
+        text-align: center;
+    }
+
+    #imgMirror .texts {
+        position: absolute;
+        top: 0%;
+        left: 0;
+        right: 0;
+        background-color: #d1bab0;
+        opacity: 0.7;
+        overflow: hidden;
+        width: 100%;
+        height: 0%;
+        transition: 2s ease;
+        text-align: center;
+    }
+
+    #imgTextile .texts {
+        position: absolute;
+        top: 0%;
+        left: 0;
+        right: 0;
+        background-color: #b8b7bd;
+        opacity: 0.7;
+        overflow: hidden;
+        width: 100%;
+        height: 0%;
+        transition: 2s ease;
+        text-align: center;
+    }
+
+    #imgVases .texts {
+        position: absolute;
+        top: 0%;
+        left: 0;
+        right: 0;
+        background-color: #777f8d;
+        opacity: 0.7;
+        overflow: hidden;
+        width: 100%;
+        height: 0%;
+        transition: 2s ease;
+        text-align: center;
+    }
+
+    #imgDecor .texts {
+        position: absolute;
+        top: 0%;
+        left: 0;
+        right: 0;
+        background-color: #4b606e;
+        opacity: 0.7;
+        overflow: hidden;
+        width: 100%;
+        height: 0%;
+        transition: 2s ease;
+        text-align: center;
+    }
+
+
+.theText {
+    width: 80%;
+    white-space: pre-wrap;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font: 60pt 'Segoe UI' 700;
+    text-align: center;
+}
+
+#imgArt:hover .texts, #imgDecor:hover .texts, #imgMirror:hover .texts, #imgTextile:hover .texts, #imgVases:hover .texts {
+    top: 0%;
+    height: 100%
+}
+
+/* NEW */
+.main2 {
+    display: flex;               /* מציב את האלמנטים בשורה */
+    flex-wrap: wrap;             /* ירדו שורה במסכים קטנים */
+    justify-content: center;     /* ממרכז אותם */
+    gap: 20px;                   /* רווחים אחידים בין התמונות */
+  }
+  
+  .main2 section {
+    flex: 1 1 22%;               /* כל תמונה תיקח בערך 22% מהרוחב */
+    max-width: 22%;              /* מגביל לגודל אחיד */
+    box-sizing: border-box;      /* כדי שה־padding/border לא ישברו את החישוב */
+    position: relative;
+  }
+  
+  .main2 img {
+    width: 100%;                 /* כל תמונה תתפרס על כל הרוחב של הקונטיינר שלה */
+    height: auto;                /* גובה אוטומטי לשמירה על פרופורציה */
+    object-fit: cover;           /* ממלא את המסגרת בלי לעוות */
+    display: block;
+  }
+  

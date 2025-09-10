@@ -1,0 +1,35 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Segoe UI';
+    background-color: #fcfbf6;
+}
+
+
+#logoDiv img {
+    height: 80px;
+    padding: 10px 10px 10px 10px;
+}
+
+.head {
+    /* background: #C9AFA3; */
+    /* background: lightsteelblue; */
+    background: #2D3343;
+}
+
+.NavIcon img {
+    width: 30px;
+}
+
+.main1 {
+    text-align: center;
+    margin: 10px;
+}
+/* 
+.main2 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+} */

@@ -1,0 +1,117 @@
+/* style.css */
+html {
+    width: 100%;
+}
+
+body {
+    background-color: #fcfbf6;
+}
+
+.NavIcon img {
+    width: 30px;
+}
+
+
+hr {
+    height: 4px;
+    padding: 0px 0px 0px 50px;
+    border: 0px;
+    border-radius: 100px;
+}
+
+span {
+    font-weight: 200;
+    font-family: 'Segoe UI';
+}
+
+#tLarge {
+    font-size: 55pt;
+    position: relative;
+    animation-name: animTLarge;
+    animation-duration: 2.8s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animTLarge {
+    from {
+        left: -45%;
+    }
+
+    to {
+        left: 0%;
+    }
+}
+
+#tSmall {
+    padding: 0px 0px 0px 20px;
+    font-size: 40pt;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-areas: "header" "nav" "main" "footer";
+    grid-template-rows: 110px 60px auto 300px;
+    width: 100%;
+}
+
+.logoTop {
+    background-color: #b8b7bd;
+}
+
+nav {
+    background-color: #b8b7bd;
+    grid-area: nav;
+    position: fixed;
+    /* top: 75px; */
+    top: 110px;
+    width: 100%;
+    z-index: 10;
+}
+
+
+header {
+    position: fixed;
+    background-color: #b8b7bd;
+    grid-area: header;
+    flex-direction: column;
+    width: 100%;
+    z-index: 10;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+    header img {
+        height: 90px;
+        padding: 10px;
+    }
+
+main {
+    grid-area: main;
+    position: relative;
+    top: 0px;
+}
+
+.MainM {
+    grid-template-areas: "main1" "main2";
+    grid-template-rows: 150px;
+}
+
+#MainM1 {
+    text-align: center;
+}
+
+    #MainM1 img {
+        width: 70%;
+    }
+
+header img {
+    height: 65px;
+}
+
+footer {
+    position: fixed;
+    background-color: #d1bab0;
+    bottom: 0px;
+    grid-area: footer;
+    width: 100%;
+}

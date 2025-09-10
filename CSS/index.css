@@ -1,0 +1,107 @@
+
+/* .wrapper {
+    display: grid;
+    grid-template-areas: "header" "nav" "main" "footer";
+    grid-template-rows: 150px 28px auto 250px;
+}
+
+body {
+    height: 100%;
+    background-color: #b8b7bd;
+}
+
+header {
+    position: fixed;
+    background-color: #ac8478;
+    grid-area: header;
+    flex-direction: column;
+    width: 100%;
+    z-index: 10;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+nav {
+    background-color: #b8b7bd;
+    grid-area: nav;
+    position: fixed;
+    top: 100px;
+    width: 100%;
+    z-index: 10;
+}
+
+main {
+    background-color: #fcfbf6;
+    grid-area: main;
+    position: relative;
+    top: 0px;
+}
+
+footer {
+    background-color: #d1bab0;
+    bottom: 0px;
+    grid-area: footer;
+    width: 100%;
+} */
+/* index.css */
+.wrapper {
+    display: flex;
+    flex-direction: column; /* מציב את האלמנטים אנכית */
+    min-height: 100vh; /* גובה מינימלי כל המסך */
+}
+
+/* גבהים יחסיים לכל חלק */
+header {
+    flex: 0 0 150px; /* גובה קבוע */
+    background-color: #ac8478;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    text-align: center;
+}
+
+nav {
+    flex: 0 0 28px; /* גובה קבוע */
+    background-color: #b8b7bd;
+    position: fixed;
+    top: 150px; /* אחרי ה-header */
+    width: 100%;
+    z-index: 10;
+}
+
+main {
+    flex: 1; /* יתפוס את כל השטח הפנוי */
+    background-color: #fcfbf6;
+    margin-top: 178px; /* כדי שלא יתחפף עם header+nav */
+    padding: 20px;
+}
+
+footer {
+    flex: 0 0 250px; /* גובה קבוע */
+    background-color: #d1bab0;
+    width: 100%;
+}
+
+
+
+#divMain {
+    grid-template-areas: "main1" "main2";
+    grid-template-rows: 50% 50%;
+    margin-bottom: 80px;
+}
+
+/*--------------------------------
+RESPONSIVE
+---------------------------------*/
+
+@media screen and (max-width:1024px) {
+}
+
+@media screen and (max-width:991px) {
+}
+
+@media screen and (max-width:767px) {
+}
+
+@media screen and (max-width:480px) {
+}
